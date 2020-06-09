@@ -2,7 +2,7 @@ const intervalLoad = setInterval( startLoad, 700)
 
 function startLoad(){
 
-    const header = document.querySelector("._3auIg")
+    const header = document.querySelector("#side header")
 
     if(header){
         clearInterval(intervalLoad)
@@ -11,7 +11,7 @@ function startLoad(){
 }
 
 function startWMF(header){
-
+console.log('init')
     var audios = []
     var mediaRate = 1
     var btMediaFast, panelMessag, loadMessag
@@ -56,14 +56,14 @@ function startWMF(header){
     }
 
 
-    const panelSide = document.querySelector('#pane-side ._21sW0._1ecJY')
+    const panelSide = document.querySelector('#pane-side')
     panelSide.addEventListener("click", panelMessageLoad)
 
     function panelMessageLoad(){
         console.log('click')
         
         setTimeout(()=>{
-          panelMessag = document.querySelector("._3zJZ2")
+          panelMessag = document.querySelector("#main")
           console.log(panelMessag)
           checkNewMessag()
           listenerMouseWhell()
